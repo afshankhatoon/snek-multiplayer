@@ -11,7 +11,8 @@ const game = new Game(new UserInterface(), new RemoteInterface())
 game.start()
 
 //const net = require('net');
-const connect = require('./client');
+const {connect} = require('./client');
+const {setupInput} = require('./input');
  /* const connect = function() {
   const conn = net.createConnection({
     host: 'localhost',
@@ -23,7 +24,7 @@ const connect = require('./client');
   });
   return conn;
 } */
-const setupInput = function() {
+/* const setupInput = function() {
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding('utf8');
@@ -34,7 +35,7 @@ const setupInput = function() {
 const handleUserInput = function(data){
 
 };
-setupInput(handleUserInput);
+setupInput(handleUserInput); */
 console.log('Connecting ...');
 connect();
-
+setupInput();
