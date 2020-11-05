@@ -37,5 +37,6 @@ const handleUserInput = function(data){
 };
 setupInput(handleUserInput); */
 console.log('Connecting ...');
-connect();
-setupInput();
+//connect();
+const conn = connect();
+setupInput(conn);
