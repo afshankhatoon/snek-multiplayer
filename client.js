@@ -11,6 +11,18 @@ const connect = function(){
   conn.on('connect', () => {
     conn.write('Name: AJK');
   });
+  /*conn.on('w', () => {
+    conn.write('Move: up');
+  });
+   conn.on('a', () => {
+    conn.write('Move: left');
+  });
+  conn.on('s', () => {
+    conn.write('Move: right');
+  });
+  conn.on('d', () => {
+    conn.write('Move: down');
+  }); */
   conn.on('data', (data) => {
     console.log('Game Server says: ', data);
   });
